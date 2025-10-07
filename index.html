@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Savvab Fresh Fruit Co.</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    .text-savvab-red {
+      color: #8B1F23;
+    }
+    
+    .bg-savvab-red {
+      background-color: #8B1F23;
+    }
+    
+    .border-savvab-red {
+      border-color: #8B1F23;
+    }
+    
+    .text-savvab-gold {
+      color: #D4A574;
+    }
+    
+    .bg-savvab-gold {
+      background-color: #D4A574;
+    }
+    
+    .hover-lift {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .hover-lift:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(139, 31, 35, 0.15);
+    }
+    
+    .shine {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .shine::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      transition: left 0.5s;
+    }
+    
+    .shine:hover::before {
+      left: 100%;
+    }
+
+    @media (max-width: 768px) {
+      .image-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+      }
+    }
+  </style>
+</head>
+<body class="bg-white">
+  
+  <div class="min-h-screen flex flex-col">
+    
+    <!-- Main Container -->
+    <div class="flex-1 container mx-auto px-4 py-6 md:py-12 max-w-7xl">
+      
+      <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        
+        <!-- Left Side - Content -->
+        <div class="space-y-6 md:space-y-8">
+          
+          <!-- Logo -->
+          <div class="flex justify-center lg:justify-start">
+            <img src="logo1.jpeg" alt="Savvab Fresh Fruit Co." class="w-48 h-48 md:w-64 md:h-64 object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div style="display:none;" class="flex flex-col items-center justify-center">
+              <div class="w-40 h-40 md:w-48 md:h-48 rounded-full bg-gradient-to-br from-savvab-gold to-savvab-red flex items-center justify-center shadow-xl">
+                <svg class="w-24 h-24 md:w-32 md:h-32 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                </svg>
+              </div>
+              <h2 class="text-3xl md:text-4xl font-bold text-savvab-red mt-3">SAVVAB</h2>
+              <p class="text-lg md:text-xl text-savvab-gold">FRESH FRUIT CO.</p>
+            </div>
+          </div>
+          
+          <!-- Welcome Text -->
+          <div class="space-y-3 text-center lg:text-left">
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-savvab-red leading-tight">
+              Welcome to<br class="hidden md:block"/>Savvab Fresh Fruit Co.
+            </h1>
+            <p class="text-base md:text-lg text-gray-600 leading-relaxed max-w-xl mx-auto lg:mx-0">
+              Premium quality Fresh Fruits, Vegetables, Salads, Sauces, Jams, Juices and more - delivered fresh to your doorstep!
+            </p>
+          </div>
+          
+          <!-- Product Categories -->
+          <div class="grid grid-cols-3 gap-2 md:gap-3 max-w-xl mx-auto lg:mx-0">
+            <div class="text-center p-2 md:p-3 bg-red-50 rounded-lg md:rounded-xl hover:bg-red-100 transition">
+              <div class="text-2xl md:text-3xl mb-1">🍎</div>
+              <p class="text-xs md:text-sm font-semibold text-savvab-red">Fresh Fruits</p>
+            </div>
+            <div class="text-center p-2 md:p-3 bg-green-50 rounded-lg md:rounded-xl hover:bg-green-100 transition">
+              <div class="text-2xl md:text-3xl mb-1">🥗</div>
+              <p class="text-xs md:text-sm font-semibold text-green-700">Vegetables</p>
+            </div>
+            <div class="text-center p-2 md:p-3 bg-orange-50 rounded-lg md:rounded-xl hover:bg-orange-100 transition">
+              <div class="text-2xl md:text-3xl mb-1">🥤</div>
+              <p class="text-xs md:text-sm font-semibold text-orange-700">Juices</p>
+            </div>
+            <div class="text-center p-2 md:p-3 bg-purple-50 rounded-lg md:rounded-xl hover:bg-purple-100 transition">
+              <div class="text-2xl md:text-3xl mb-1">🍯</div>
+              <p class="text-xs md:text-sm font-semibold text-purple-700">Jams</p>
+            </div>
+            <div class="text-center p-2 md:p-3 bg-yellow-50 rounded-lg md:rounded-xl hover:bg-yellow-100 transition">
+              <div class="text-2xl md:text-3xl mb-1">🥫</div>
+              <p class="text-xs md:text-sm font-semibold text-yellow-700">Sauces</p>
+            </div>
+            <div class="text-center p-2 md:p-3 bg-pink-50 rounded-lg md:rounded-xl hover:bg-pink-100 transition">
+              <div class="text-2xl md:text-3xl mb-1">🥗</div>
+              <p class="text-xs md:text-sm font-semibold text-pink-700">Salads</p>
+            </div>
+          </div>
+          
+          <!-- Big Visit Button -->
+          <div class="text-center lg:text-left">
+            <a href="https://genuinenutrition.com/" target="_blank" class="inline-block w-full md:w-auto">
+              <button class="bg-savvab-red text-white text-lg md:text-xl font-bold px-8 md:px-12 py-4 md:py-5 rounded-xl md:rounded-2xl hover-lift shine shadow-lg w-full md:w-auto">
+                Visit Our Website
+                <svg class="inline-block w-6 h-6 md:w-7 md:h-7 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+              </button>
+            </a>
+          </div>
+          
+          <!-- Email for Mobile -->
+          <div class="lg:hidden text-center bg-gradient-to-r from-savvab-red to-red-900 rounded-xl p-4 shadow-lg text-white">
+            <p class="text-xs mb-2 opacity-90">Contact us:</p>
+            <a href="mailto:connect@genuinenutrition.com" class="text-sm md:text-base font-bold hover:text-savvab-gold transition flex items-center justify-center break-all">
+              <svg class="w-5 h-5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+              connect@genuinenutrition.com
+            </a>
+            <div class="mt-2">
+              <a href="https://connect.genuinenutrition.com" target="_blank" class="text-xs underline opacity-90">Connect.genuinenutrition.com</a>
+            </div>
+          </div>
+          
+        </div>
+        
+        <!-- Right Side - Images -->
+        <div class="space-y-4 md:space-y-6">
+          
+          <!-- Images Grid -->
+          <div class="image-grid md:grid md:grid-cols-2 md:gap-4">
+            <div class="rounded-2xl overflow-hidden shadow-lg border-3 border-savvab-gold hover-lift">
+              <img src="img1.jpeg" alt="Savvab Products 1" class="w-full h-full object-cover aspect-square" onerror="this.src='https://images.unsplash.com/photo-1610832958506-aa56368176cf?w=600';">
+            </div>
+            <div class="rounded-2xl overflow-hidden shadow-lg border-3 border-savvab-red hover-lift">
+              <img src="img2.jpeg" alt="Savvab Products 2" class="w-full h-full object-cover aspect-square" onerror="this.src='https://images.unsplash.com/photo-1619566636858-adf3ef46400b?w=600';">
+            </div>
+            <div class="rounded-2xl overflow-hidden shadow-lg border-3 border-savvab-red hover-lift">
+              <img src="img3.jpeg" alt="Savvab Products 3" class="w-full h-full object-cover aspect-square" onerror="this.src='https://images.unsplash.com/photo-1618897996318-5a901fa6ca71?w=600';">
+            </div>
+            <div class="rounded-2xl overflow-hidden shadow-lg border-3 border-savvab-gold hover-lift">
+              <img src="img4.jpeg" alt="Savvab Products 4" class="w-full h-full object-cover aspect-square" onerror="this.src='https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600';">
+            </div>
+          </div>
+          
+          <!-- Email for Desktop -->
+          <div class="hidden lg:block bg-gradient-to-r from-savvab-red to-red-900 rounded-2xl p-5 shadow-xl text-white">
+            <p class="text-sm mb-2 opacity-90">Contact us directly:</p>
+            <a href="mailto:connect@genuinenutrition.com" class="text-lg font-bold hover:text-savvab-gold transition flex items-center break-all">
+              <svg class="w-6 h-6 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+              connect@genuinenutrition.com
+            </a>
+            <div class="mt-3">
+              <a href="https://connect.genuinenutrition.com" target="_blank" class="text-sm underline opacity-90">Connect.genuinenutrition.com</a>
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+      
+    </div>
+    
+    <!-- Footer -->
+    <footer class="py-6 md:py-8 border-t border-gray-200">
+      <div class="container mx-auto px-4 text-center">
+        <div class="flex items-center justify-center space-x-3 text-savvab-gold opacity-50 mb-3">
+          <div class="w-12 md:w-16 h-0.5 bg-savvab-gold rounded"></div>
+          <svg class="w-6 h-6 md:w-8 md:h-8" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2L9.5 8.5L3 9l5.5 4.5L7 21l5-3.5L17 21l-1.5-7.5L21 9l-6.5-.5z"/>
+          </svg>
+          <div class="w-12 md:w-16 h-0.5 bg-savvab-gold rounded"></div>
+        </div>
+        <p class="text-gray-400 text-xs md:text-sm">Fresh Fruits • Vegetables • Juices • Jams • Sauces • Salads</p>
+        <p class="text-gray-300 text-xs mt-2">© 2025 Savvab Fresh Fruit Co. All rights reserved.</p>
+  <p class="text-gray-400 text-xs mt-1">A brand registered under Arvi consumer pvt ltd</p>
+      </div>
+    </footer>
+    
+  </div>
+  
+</body>
+</html>
