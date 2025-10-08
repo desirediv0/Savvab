@@ -77,6 +77,24 @@
   </style>
 </head>
 <body class="bg-white">
+  <!-- Site Header -->
+  <header class="w-full bg-white py-3">
+    <div class="container mx-auto px-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <img src="logo1.jpeg" alt="Savvab" class="w-14 h-14 object-contain" onerror="this.style.display='none';">
+        <span class="hidden sm:inline-block font-bold text-savvab-red text-lg">SAVVAB</span>
+      </div>
+      <nav class="hidden md:flex items-center space-x-6 text-sm">
+        <a href="#" class="text-gray-700 hover:text-savvab-red">Home</a>
+        <a href="#" class="text-gray-700 hover:text-savvab-red">About</a>
+        <a href="#" class="text-gray-700 hover:text-savvab-red">Contact</a>
+      </nav>
+      <!-- On mobile show the email on the right and hide the menu -->
+      <div class="flex items-center md:hidden text-sm">
+        <a href="mailto:connect@genuinenutrition.com" class="text-savvab-red font-semibold">connect@genuinenutrition.com</a>
+      </div>
+    </div>
+  </header>
   
   <div class="min-h-screen flex flex-col">
     
@@ -239,16 +257,14 @@
     <!-- Footer -->
     <footer class="py-6 md:py-8 border-t border-gray-200">
       <div class="container mx-auto px-4 text-center">
-        <div class="flex items-center justify-center space-x-3 text-savvab-gold opacity-50 mb-3">
+        <div class="flex items-center justify-center space-x-3 text-savvab-gold mb-3">
           <div class="w-12 md:w-16 h-0.5 bg-savvab-gold rounded"></div>
-          <svg class="w-6 h-6 md:w-8 md:h-8" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 2L9.5 8.5L3 9l5.5 4.5L7 21l5-3.5L17 21l-1.5-7.5L21 9l-6.5-.5z"/>
-          </svg>
+          
+          <p class="text-gray-900 text-sm mt-1 capitalize">A brand registered under Arvi Consumer Pvt</p>
           <div class="w-12 md:w-16 h-0.5 bg-savvab-gold rounded"></div>
         </div>
         <p class="text-gray-400 text-xs md:text-sm">Fresh Fruits • Vegetables • Juices • Jams • Sauces • Salads</p>
         <p class="text-gray-300 text-xs mt-2">© 2025 Savvab Fresh Fruit Co. All rights reserved.</p>
-  <p class="text-gray-400 text-xs mt-1">A brand registered under Arvi consumer pvt ltd</p>
       </div>
     </footer>
     
